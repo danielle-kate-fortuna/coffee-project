@@ -81,19 +81,19 @@ roastSelection.addEventListener('input', updateCoffees);
 userInput.addEventListener('input', updateCoffees);
 
 
-// CODE FOR MAKING A USER-CREATED FAKE COFFEE -----------------------
+//------------------ CODE FOR MAKING A USER-CREATED FAKE COFFEE -----------------------
 
-var newUserInput = document.getElementById('new-user-input');
-var newUserRoast = document.getElementById('new-roast-selection');
-
-function MakeFakeCoffee(e) {
-    e.preventDefault();
-    var newCoffee = {id: (coffees.length + 1), name: newUserInput.value, roast: newUserRoast.value};
-    coffees.push(newCoffee);
-    updateCoffees(e);
-    coffees.innerHTML = renderCoffees(coffees);
-}
-
-var fakeCoffeeButton = document.getElementById('FakeCoffeeButton');
-
-fakeCoffeeButton.addEventListener("click", MakeFakeCoffee);
+// var newUserInput = document.getElementById('new-user-input');
+// var newUserRoast = document.getElementById('new-roast-selection');
+//
+// function MakeFakeCoffee(e) {
+//     e.preventDefault();
+//     var newCoffee = {id: (coffees.length + 1), name: newUserInput.value, roast: newUserRoast.value};
+//     coffees.push(newCoffee);
+//     updateCoffees(e);
+//     coffees.innerHTML = renderCoffees(coffees);
+// }
+//
+// var fakeCoffeeButton = document.getElementById('FakeCoffeeButton');
+//
+// fakeCoffeeButton.addEventListener("click", MakeFakeCoffee);
