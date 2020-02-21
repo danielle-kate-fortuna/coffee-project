@@ -20,9 +20,23 @@
         <br><input type="text" id="userInputElement" placeholder="Enter your coffee" />
     </form>
 
-    <table>
-        <tbody id="coffees"></tbody>
-    </table>
+    <form>
+        <h3>New Coffee!</h3>
+        <label for="new-roast-selection"></label>
+        <select id="new-roast-selection">
+            <option>Light</option>
+            <option>Medium</option>
+            <option>Dark</option>
+        </select>
+        <label for="new-user-input"></label>
+        <br>
+        <input type="text" id="new-user-input" placeholder="Enter your coffee" />
+        <br>
+        <button type="submit" id="FakeCoffeeButton">Make a fake coffee yayy</button>
+    </form>
+
+        <div id="coffees"></div>
+
 
     <script src="main.js"></script>
 </body>

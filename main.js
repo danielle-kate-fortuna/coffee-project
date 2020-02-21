@@ -2,20 +2,20 @@
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'Light'},
+    {id: 2, name: 'Half City', roast: 'Light'},
+    {id: 3, name: 'Cinnamon', roast: 'Light'},
+    {id: 4, name: 'City', roast: 'Medium'},
+    {id: 5, name: 'American', roast: 'Medium'},
+    {id: 6, name: 'Breakfast', roast: 'Medium'},
+    {id: 7, name: 'High', roast: 'Dark'},
+    {id: 8, name: 'Continental', roast: 'Dark'},
+    {id: 9, name: 'New Orleans', roast: 'Dark'},
+    {id: 10, name: 'European', roast: 'Dark'},
+    {id: 11, name: 'Espresso', roast: 'Dark'},
+    {id: 12, name: 'Viennese', roast: 'Dark'},
+    {id: 13, name: 'Italian', roast: 'Dark'},
+    {id: 14, name: 'French', roast: 'Dark'},
 ];
 
 // Sets up the format for the coffees
@@ -43,7 +43,6 @@ function getUserInput() {
     return document.getElementById('userInputElement').value.toLowerCase();
 }
 
-var userInputValue = document.getElementById('userInputElement').value;
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -66,14 +65,14 @@ function updateCoffees(e) {
         }
         console.log("running for each");
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    OldTableDiv.innerHTML = renderCoffees(filteredCoffees);
 }
 
 
 
-var tbody = document.querySelector('#coffees');
+var OldTableDiv = document.querySelector('#coffees');
 // Calls render Coffees
-tbody.innerHTML = renderCoffees(coffees);
+OldTableDiv.innerHTML = renderCoffees(coffees);
 
 var roastSelection = document.querySelector('#roast-selection');
 
@@ -81,3 +80,18 @@ var userInput = document.getElementById('userInputElement');
 
 roastSelection.addEventListener('input', updateCoffees);
 userInput.addEventListener('input', updateCoffees);
+
+
+
+var newUserInput = document.getElementById('new-user-input').value;
+
+var newUserRoast = document.getElementById('new-roast-selection').value;
+console.log(newUserRoast);
+var newUserCoffee = document.getElementById('FakeCoffeeButton');
+
+function MakeFakeCoffee(x) {
+    var newCoffee = {id: (coffees.length + 1), name: newUserInput, roast: newUserRoast};
+    coffees.push(newCoffee);
+}
+
+newUserCoffee.addEventListener("click", MakeFakeCoffee);
