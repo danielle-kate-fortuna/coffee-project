@@ -11,21 +11,16 @@
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option selected>All</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        <br><input type="text" id="userInput" placeholder="Enter your coffee"/>
         <input id="submit" type="submit" />
     </form>
 
     <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
         <tbody id="coffees"></tbody>
     </table>
 
