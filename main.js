@@ -63,15 +63,12 @@ var tbody = document.querySelector('#coffees');
 var roastSelection = document.querySelector('#roast-selection');
 
 function getUserInput() {
-    var userInput = document.getElementById('userInputElement').value;
-    return userInput;
+    return document.getElementById('userInputElement').value;
 }
+
+var userInput = document.getElementById('userInputElement').value;
 
 tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('input', updateCoffees);
-userInput.addEventListener('input', updateCoffees);
-// submitButton.addEventListener('click', getUserInput);
-// submitButton.addEventListener('input', getUserInput);
-
-var userInput = document.getElementById('userInputElement').value;
+// userInput.addEventListener('input', updateCoffees); // Didn't work
