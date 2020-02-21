@@ -63,7 +63,6 @@ function updateCoffees(e) {
                 filteredCoffees.push(coffee);
             }
         }
-        console.log("running for each");
     });
     OldTableDiv.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -84,17 +83,17 @@ userInput.addEventListener('input', updateCoffees);
 
 // CODE FOR MAKING A USER-CREATED FAKE COFFEE -----------------------
 
+var newUserInput = document.getElementById('new-user-input');
+var newUserRoast = document.getElementById('new-roast-selection');
 
-var newUserInput = document.getElementById('new-user-input').value;
-
-var newUserRoast = document.getElementById('new-roast-selection').value;
-console.log(newUserRoast);
-var newUserCoffee = document.getElementById('FakeCoffeeButton');
-
-function MakeFakeCoffee(x) {
-    var newCoffee = {id: (coffees.length + 1), name: newUserInput, roast: newUserRoast};
+function MakeFakeCoffee(e) {
+    e.preventDefault();
+    var newCoffee = {id: (coffees.length + 1), name: newUserInput.value, roast: newUserRoast.value};
     coffees.push(newCoffee);
+    updateCoffees(e);
+    coffees.innerHTML = renderCoffees(coffees);
 }
 
-newUserCoffee.addEventListener("input", MakeFakeCoffee);
-document.getElementById('new-roast-selection').addEventListener("input", MakeFakeCoffee);
+var fakeCoffeeButton = document.getElementById('FakeCoffeeButton');
+
+fakeCoffeeButton.addEventListener("click", MakeFakeCoffee);
