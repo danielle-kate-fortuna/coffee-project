@@ -58,16 +58,20 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+var tbody = document.querySelector('#coffees');
+// var submitButton = document.querySelector('#submit');
+var roastSelection = document.querySelector('#roast-selection');
+
 function getUserInput() {
-    var userInput = document.getElementById('userInput').value;
+    var userInput = document.getElementById('userInputElement').value;
     return userInput;
 }
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
-submitButton.addEventListener('click', getUserInput);
+roastSelection.addEventListener('input', updateCoffees);
+userInput.addEventListener('input', updateCoffees);
+// submitButton.addEventListener('click', getUserInput);
+// submitButton.addEventListener('input', getUserInput);
+
+var userInput = document.getElementById('userInputElement').value;
