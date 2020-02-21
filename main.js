@@ -82,6 +82,8 @@ roastSelection.addEventListener('input', updateCoffees);
 userInput.addEventListener('input', updateCoffees);
 
 
+// CODE FOR MAKING A USER-CREATED FAKE COFFEE -----------------------
+
 
 var newUserInput = document.getElementById('new-user-input').value;
 
@@ -94,4 +96,5 @@ function MakeFakeCoffee(x) {
     coffees.push(newCoffee);
 }
 
-newUserCoffee.addEventListener("click", MakeFakeCoffee);
+newUserCoffee.addEventListener("input", MakeFakeCoffee);
+document.getElementById('new-roast-selection').addEventListener("input", MakeFakeCoffee);
