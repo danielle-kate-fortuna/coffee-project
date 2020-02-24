@@ -1,5 +1,9 @@
 "use strict";
 
+// Animate intro to website
+
+
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'Light'},
@@ -21,9 +25,7 @@ var coffees = [
 // Sets up the format for the coffees
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<h3>' + coffee.name + '</h3>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</div>';
+    html += '<h3>' + coffee.name + '</h3> // ' + coffee.roast;
 
     return html;
 }

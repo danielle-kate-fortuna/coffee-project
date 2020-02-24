@@ -2,44 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Fancy Coffee Company</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Spectral+SC|Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Coffee!</h1>
+
+<video autoplay muted loop id="myVideo">
+    <source src="assets/videos/coffeesteam.mp4" type="video/mp4">
+</video>
+
+<header>
+    <h1>Fancy Coffee Co.</h1>
+    <hr>
+    <h3>Wake  Up  on  the  Right  Side</h3>
+</header>
+
 <!--form for selecting an existing coffee-->
-    <form>
+<form>
+    <div id="search-div">
+        <label for="userInputElement"></label>
+        <input type="text" id="userInputElement" placeholder="Search coffees" />
         <label for="roast-selection"></label>
         <select id="roast-selection">
-            <option selected>All</option>
+            <option disabled selected value="All">Roast</option>
+            <option>All</option>
             <option>Light</option>
             <option>Medium</option>
             <option>Dark</option>
         </select>
-        <label for="userInputElement"></label>
-        <br><input type="text" id="userInputElement" placeholder="Enter your coffee" />
-    </form>
+    </div>
+
+    <!--    COFFEE LIST -->
+    <div id="coffees"></div>
+</form>
+
 <!--Code for user-created fake coffee-->
-    <form>
-        <h3>New Coffee!</h3>
-        <label for="new-roast-selection"></label>
-        <select id="new-roast-selection">
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-        </select>
-        <label for="new-user-input"></label>
-        <br>
-        <input type="text" id="new-user-input" placeholder="Enter your coffee" />
-        <br>
-        <button id="FakeCoffeeButton">Make a fake coffee yayy</button>
 
-
-        <div id="coffees"></div>
-    </form>
+<!--<form>-->
+<!--    <h3>New Coffee!</h3>-->
+<!--    <label for="new-roast-selection"></label>-->
+<!--    <select id="new-roast-selection">-->
+<!--        <option>Light</option>-->
+<!--        <option>Medium</option>-->
+<!--        <option>Dark</option>-->
+<!--    </select>-->
+<!--    <label for="new-user-input"></label>-->
+<!--    <input type="text" id="new-user-input" placeholder="Enter your coffee" />-->
+<!--    <br>-->
+<!--    <button id="FakeCoffeeButton">Make a fake coffee yayy</button>-->
+<!--</form>-->
 <!--Listing coffees-->
 
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

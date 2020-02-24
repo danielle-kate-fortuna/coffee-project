@@ -1,9 +1,107 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+* {
+    box-sizing: border-box;
+    text-align: center;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+hr {
+    width: 54em;
+    color: #c5c2b15e;
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #010101;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+form {
+    position: absolute;
+    z-index: 1;
+    right: 10%;
+    top: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+}
+
+h1, h3 {
+    text-transform: uppercase;
+    font-family: 'Spectral SC', sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 3.5em;
+    letter-spacing: 10px;
+    margin-bottom: 0;
+}
+
+h3 {
+    letter-spacing: 3px;
+    display: inline-block;
+    transition: .5s;
+}
+
+header h3 {
+    letter-spacing: 17px;
+}
+
+#search-div {
+    margin: 2em 0;
+    border-bottom: 1px solid white;
+}
+
+#coffees {
+    column-count: 2;
+    width: 39vw;
+    height: 500px;
+}
+
+#coffees h3:hover {
+    letter-spacing: 7px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+input, select {
+    background-color: transparent;
+    color: #c5c2b1;
+    font-size: 1.75em;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+}
+
+input {
+    width: 70%;
+}
+
+input::placeholder {
+    color: #c5c2b1;
+    letter-spacing: 2px;
+}
+
+select {
+    border-left: 1px solid #272727;
+    width: 29%;
+    margin: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
